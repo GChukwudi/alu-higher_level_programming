@@ -1,5 +1,5 @@
 # Python - if/else, loops, functions
-## Objectives:### To know;
+## Objectives: To know;
 Why Python programming is awesome
 Why indentation is so important in Python
 How to use the if, if ... else statements
