@@ -1,21 +1,7 @@
 #!/usr/bin/python3
-offset = -32
-
 def uppercase(str):
-    i = 0
-    while i < len(str):
-        if islower(str[i]):
-            holder = ord(stru[i]) + offset
-            new_str = chr(holder)
-        else:
-            new_str = str[i]
-            print("{}".format(new_str), end='')
-            i = i + 1
+    for c in str:
+        if ord(c) >= 97 and ord(c) <= 122:
+            c = chr(ord(c) - 32)
+            print("{}".format(c), end="")
             print("")
-
-def islower(str):
-    value = ord(str)
-    if value >= 97 and value <= 122:
-        return True
-    else:
-        return False
