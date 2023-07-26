@@ -9,16 +9,19 @@ class Rectangle:
         """ Instantiation with optional width and height"""
         self.width = width
         self.height = height
+    
     @property
     def width(self):
         """ width
         """
         return self.__width
+    
     @property
     def height(self):
         """height
         """
         return self.__height
+    
     @width.setter
     def width(self, value):
         """ width setter
