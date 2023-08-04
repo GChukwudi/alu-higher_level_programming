@@ -11,7 +11,7 @@ if __name__ == "__main__":
         print('Body response:')
         print("\t- type: {}".format(type(html)))
         print("\t- content: {}".format(html))
-        """ the method i used is easy way for string manipulation 
+        """ the method i used is easy way for string manipulation
             to use a method that make use of the concept
             print out html.decode('utf-8') with string formatting
         """
