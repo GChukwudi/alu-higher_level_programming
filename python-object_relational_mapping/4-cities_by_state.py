@@ -8,13 +8,14 @@ if __name__ == "__main__":
     # port and host are default local and 3306
     db = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
     cur = db.cursor()
-    cur.execute("""SELECT * FROM states ORDER BY states.id ASC""")
+    # link both tables and get base on state_id
+    cur.execute("""SELECT cities.id, cities.name, states.name FROM cities\
+    JOIN states ON cities.state_id = states.id ORDER BY cities.id ASC""")
     result = cur.fetchall()
-    # display elements with N
-    # only by taking comparing their first letter in tuple
+    # check if second argument of tuple
+    # is same as the passed argument
     for i in result:
-        if i[1][0] == 'N':
-            print(i)
+        print(i)
     # close cursor and db
     cur.close()
     db.close()
