@@ -1,6 +1,6 @@
 #!/usr/bin/node
 let i;
 const string = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-for (i = 0; i > 3; i++) {
-  console.log(string[i]);
+for (const i of string) {
+  console.log(i);
 }
