@@ -1,4 +1,5 @@
 ## JavaScript - Warm-up
+![Javascript-535 png](https://github.com/GChukwudi/alu-higher_level_programming/assets/127259967/46b6ec4f-201a-4810-9ec0-5e700992000e)
 
 ### General Learning Objective;
 The project is aimed to enlighten me more on:
@@ -18,5 +19,3 @@ The project is aimed to enlighten me more on:
 1. What are the arithmetic operators, and how to use them
 1. How to manipulate a dictionary
 1. How to import a file
-
-![Javascript-535 png](https://github.com/GChukwudi/alu-higher_level_programming/assets/127259967/46b6ec4f-201a-4810-9ec0-5e700992000e)
