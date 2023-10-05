@@ -1,15 +1,20 @@
 #!/usr/bin/node
 const request = require('request');
-const { argv, exit } = require('process');
-
-if (argv.length !== 3) {
-  exit(0);
-}
-
-const options = {
-  url: `https://swapi-api.hbtn.io/api/films/${argv[2]}/`,
-  method: 'GET',
-  headers: {
-    'Accept-Charset': 'utf-8'
+const url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
+request(url, function (error, response, body) {
+  if (!error) {
+    const characters = JSON.parse(body).characters;
+    printCharacters(characters, 0);
   }
-};
+});
+
+function printCharacters (characters, index) {
+  request(characters[index], function (error, response, body) {
+    if (!error) {
+      console.log(JSON.parse(body).name);
+      if (index + 1 < characters.length) {
+        printCharacters(characters, index + 1);
+      }
+    }
+  });
+}
